@@ -6,3 +6,8 @@ run:
 
 hub_push:
 	sudo docker login & sudo docker push denisbakhtin/docker_test
+
+git_push:
+	@echo -n "What's commit name? "
+	read commit
+	git add -u & git add . & git commit -m "$commit"; git push origin master
